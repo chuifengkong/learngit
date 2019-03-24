@@ -1,0 +1,10 @@
+MySQL存储过程
+	CREATE PROCEDURE sp1() SELECT VERSION();   创建存储过程
+	CALL sp1;      调用存储过程
+	
+	DELIMITER //     将语句结束符;改为//
+	CREATE PROCEDURE removeUserById(IN id INT UNSIGNED)
+	BEGIN
+	DELETE FROM users WHERE id = id;
+	END
+	//          以//结束
